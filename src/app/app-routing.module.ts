@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SwaggerUiComponent } from './swagger-ui/swagger-ui.component';
-import { SwaggerEditorComponent } from './swagger-editor/swagger-editor.component';
+import { SwaggerUiComponent } from './modules/swagger-ui/swagger-ui.component';
+import { SwaggerEditorComponent } from './modules/swagger-editor/swagger-editor.component';
+import { HomeComponent } from './modules/home/home.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/ui', pathMatch: 'full' },
+  { path: '',
+    component: HomeComponent
+  },
   {
     path: 'ui',
     component: SwaggerUiComponent
