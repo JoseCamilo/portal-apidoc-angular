@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SwaggerUiComponent } from './swagger-ui.component';
+import { ApiDocumentationComponent } from './api-documentation.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SwaggerUiComponent,
-  },
-  {
-    path: 'doc/:id',
-    component: SwaggerUiComponent,
+    component: ApiDocumentationComponent,
   },
 ];
 
@@ -17,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SwaggerUiRouting {}
+export class ApiDocumentationRouting {}
