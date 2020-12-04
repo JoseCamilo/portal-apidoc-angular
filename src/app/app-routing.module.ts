@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SwaggerUiComponent } from './modules/swagger-ui/swagger-ui.component';
-import { SwaggerEditorComponent } from './modules/swagger-editor/swagger-editor.component';
-import { HomeComponent } from './modules/home/home.component';
 
 export const routes: Routes = [
   { path: '',
-    component: HomeComponent
+    loadChildren: () =>  import('./modules/home/home.module').then(
+      (m) => m.HomeModule
+    ),
   },
   {
     path: 'ui',
-    component: SwaggerUiComponent
+    loadChildren: () =>  import('./modules/swagger-ui/swagger-ui.module').then(
+      (m) => m.SwaggerUiModule
+    ),
   },
   {
     path: 'editor',
-    component: SwaggerEditorComponent,
+    loadChildren: () =>  import('./modules/swagger-editor/swagger-editor.module').then(
+      (m) => m.SwaggerEditorModule
+    ),
   },
 ];
 
