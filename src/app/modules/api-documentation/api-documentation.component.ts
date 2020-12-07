@@ -13,25 +13,29 @@ export class ApiDocumentationComponent implements OnInit {
       label: 'CRM',
       shortLabel: 'CRM',
       subItems: [
-        { label: 'Contas', link: 'doc/protheus-crm-contas' },
-        { label: 'Vendas', link: 'doc/protheus-crm-vendas' },
+        { label: 'Contas', action: () => this.onRefresh('protheus-crm-contas') },
+        { label: 'Vendas', action: () => this.onRefresh('api/protheus-crm-vendas') },
       ]
     },
     {
       label: 'Contas',
       shortLabel: 'Contas',
-      link: 'doc/protheus-crm-contas'
+      action: () => this.onRefresh('protheus-crm-contas')
     },
     {
       label: 'Vendas',
       shortLabel: 'Vendas',
-      link: 'doc/protheus-crm-vendas'
+      action: () => this.onRefresh('api/protheus-crm-vendas')
     }
   ];
 
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  onRefresh(id: string): void {
+    window.location.href = `${window.location.protocol}//${window.location.hostname}:${window.location.port}/api/${id}`;
   }
 
 }

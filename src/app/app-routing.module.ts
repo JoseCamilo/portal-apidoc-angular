@@ -19,7 +19,7 @@ export const routes: Routes = [
         ),
       },
       {
-        path: 'api/doc/:id',
+        path: 'api/:id',
         loadChildren: () =>  import('./modules/swagger-ui/swagger-ui.module').then(
           (m) => m.SwaggerUiModule
         ),
