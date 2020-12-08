@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import {
+  faCubes,
+  faShieldAlt,
+  faFileContract,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home-documentation',
@@ -7,6 +11,10 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./home-documentation.component.css'],
 })
 export class HomeDocumentationComponent implements OnInit {
+  faCubes = faCubes;
+  faShieldAlt = faShieldAlt;
+  faFileContract = faFileContract;
+
   constructor() {}
 
   ngOnInit(): void {}

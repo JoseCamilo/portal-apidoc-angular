@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { PoPageModule, PoModule, PoWidgetModule } from '@po-ui/ng-components';
 import { HomeDocumentationComponent } from './home-documentation.component';
 import { HomeDocumentationRouting } from './home-documentation.routing';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [HomeDocumentationComponent],
@@ -14,6 +15,7 @@ import { HomeDocumentationRouting } from './home-documentation.routing';
     PoPageModule,
     HomeDocumentationRouting,
     PoWidgetModule,
+    FontAwesomeModule,
   ],
   providers: [],
 })
