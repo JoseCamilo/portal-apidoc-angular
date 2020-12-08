@@ -10,8 +10,8 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('./item-documentation/item-documentation.module').then(
-            (m) => m.ItemDocumentationModule
+          import('./home-documentation/home-documentation.module').then(
+            (m) => m.HomeDocumentationModule
           ),
       },
       {
