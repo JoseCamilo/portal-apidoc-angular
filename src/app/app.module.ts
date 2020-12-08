@@ -4,21 +4,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PoModule } from '@po-ui/ng-components';
-import { ApiDocumentationModule } from './modules/api-documentation/api-documentation.module';
+import { PoModule, PoNavbarModule } from '@po-ui/ng-components';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     PoModule,
-    ApiDocumentationModule
+    PoNavbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SwaggerUiComponent } from './swagger-ui.component';
+import { ItemDocumentationComponent } from './item-documentation.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SwaggerUiComponent,
+    component: ItemDocumentationComponent,
   },
   {
     path: ':id',
-    component: SwaggerUiComponent,
+    component: ItemDocumentationComponent,
   },
 ];
 
@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SwaggerUiRouting {}
+export class ItemDocumentationRouting {}

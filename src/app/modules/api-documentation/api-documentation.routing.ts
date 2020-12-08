@@ -6,6 +6,22 @@ const routes: Routes = [
   {
     path: '',
     component: ApiDocumentationComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./item-documentation/item-documentation.module').then(
+            (m) => m.ItemDocumentationModule
+          ),
+      },
+      {
+        path: ':id',
+        loadChildren: () =>
+          import('./item-documentation/item-documentation.module').then(
+            (m) => m.ItemDocumentationModule
+          ),
+      },
+    ],
   },
 ];
 

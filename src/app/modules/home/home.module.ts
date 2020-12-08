@@ -7,13 +7,7 @@ import { HomeRouting } from './home.routing';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    FormsModule,
-    PoPageModule,
-    PoModule,
-    HomeRouting,
-  ],
+  imports: [CommonModule, FormsModule, PoPageModule, PoModule, HomeRouting],
   providers: [],
 })
 export class HomeModule {}
