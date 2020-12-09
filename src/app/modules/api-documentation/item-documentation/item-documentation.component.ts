@@ -18,7 +18,6 @@ export class ItemDocumentationComponent implements OnInit {
     },
   ];
   doc;
-  title = '';
   showUi = true;
 
   constructor(private route: ActivatedRoute, private router: Router) {
@@ -35,7 +34,6 @@ export class ItemDocumentationComponent implements OnInit {
 
   loadDocument(): void {
     if (this.route.snapshot.params.id) {
-      this.title = this.route.snapshot.params.id;
       const pos = this.docs
         .map((e) => {
           return e.id;
