@@ -1,0 +1,32 @@
+<po-page-default p-title="Novo documento de API" class="app-page-full">
+
+  <div class="po-row">
+    <form class="po-md-12 po-lg-6" [formGroup]="formUpload">
+      
+      <div class="po-row">
+        <po-input
+            class="po-sm-12"
+            formControlName="menu"
+            p-label="Menu"
+            p-help="Informe qual é o nome do item de menu em que seu documento ficará disponível. Para colocar em submenus, separe os itens com > . Ex. CRM > Contas > Clientes"
+            p-clean
+          >
+          </po-input>
+      </div>
+
+      <div class="po-row">
+        <po-upload
+          class="po-sm-12"
+          formControlName="file"
+          p-label="Seu Swagger"
+          p-help="Arquivos .yaml ou .json com no máximo 1MB"
+          p-drag-drop
+          p-hide-restrictions-info
+          p-restrictions="fileRestrictions"
+          p-form-field="file"
+          p-url="https://webhook.site/fd82b0e9-93e1-41b6-8615-a74879cc1f6e">
+        </po-upload>
+      </div>
+    </form>
+  </div>
+</po-page-default>

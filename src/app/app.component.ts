@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
     { label: 'Ferramentas' },
     { label: 'Equipes' },
     { label: 'Editor Swagger', link: '/editor' },
-    { label: 'Sobre nós' },
+    { label: 'Upload', link: '/upload' },
   ];
 
   icons: Array<PoNavbarIconAction> = [

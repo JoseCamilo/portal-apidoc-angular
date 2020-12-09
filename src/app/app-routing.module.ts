@@ -29,6 +29,13 @@ export const routes: Routes = [
         (m) => m.SwaggerEditorModule
       ),
   },
+  {
+    path: 'upload',
+    loadChildren: () =>
+      import('./modules/upload-doc/upload-doc.module').then(
+        (m) => m.UploadDocModule
+      ),
+  },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
