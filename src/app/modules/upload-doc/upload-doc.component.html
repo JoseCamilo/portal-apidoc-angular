@@ -24,7 +24,8 @@
           p-hide-restrictions-info
           p-restrictions="fileRestrictions"
           p-form-field="file"
-          p-url="https://webhook.site/fd82b0e9-93e1-41b6-8615-a74879cc1f6e">
+          [p-url]="urlService"
+          (p-upload)="onUpdateService($event)">
         </po-upload>
       </div>
     </form>

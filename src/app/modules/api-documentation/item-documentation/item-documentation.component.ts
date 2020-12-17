@@ -10,11 +10,13 @@ export class ItemDocumentationComponent implements OnInit {
   docs = [
     {
       id: 'protheus-crm-contas',
-      url: 'https://ti.totvs.com/api/be/swagger/protheus-crm-contas.yaml',
+      url:
+        'https://totvstizendesk.blob.core.windows.net/apis/swagger/protheus-crm-contas.yaml',
     },
     {
       id: 'protheus-crm-vendas',
-      url: 'https://ti.totvs.com/api/be/swagger/protheus-crm-vendas.yaml',
+      url:
+        'https://totvsti-cdn.azureedge.net/apis/swagger/protheus-crm-vendas.yaml',
     },
   ];
   doc;
